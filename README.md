@@ -230,4 +230,4 @@ roster_system/
 - 新增一鍵自動排班功能
 - 新增員工店鋪偏好設定
 - 優化 UI/UX
-- 新增班型顏色區分
+- 新增班型顏色區分"# roster_system_green" 
