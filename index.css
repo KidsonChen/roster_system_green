@@ -1,0 +1,42 @@
+@import "tailwindcss"; /* 如果使用 Tailwind v4 */
+
+/* 列印專用媒體查詢 */
+@media print {
+  /* 1. 隱藏不必要的網頁操作元素 */
+  .no-print,
+  button,
+  header,
+  input,
+  select,
+  .fixed {
+    display: none !important;
+  }
+
+  /* 2. 強制 A4 橫向配置與邊距 */
+  @page {
+    size: A4 landscape;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+
+  /* 3. 調整網頁主體寬度填滿紙張 */
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print-area {
+    border: 2px solid #1e293b !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    width: 100% !important;
+  }
+
+  .calendar-grid {
+    border-color: #000000 !important;
+    font-size: 11px !important; /* 微調字體大小確保能印在單頁內 */
+  }
+}
